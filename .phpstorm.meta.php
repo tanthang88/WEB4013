@@ -11,6 +11,8 @@ namespace PHPSTORM_META {
     */
     override(new \Illuminate\Contracts\Container\Container, map([
         '' => '@',
+            'Diglactic\Breadcrumbs\Generator' => \Diglactic\Breadcrumbs\Generator::class,
+            'Diglactic\Breadcrumbs\Manager' => \Diglactic\Breadcrumbs\Manager::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'Illuminate\Auth\Middleware\RequirePassword' => \Illuminate\Auth\Middleware\RequirePassword::class,
             'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
@@ -54,6 +56,7 @@ namespace PHPSTORM_META {
             'Illuminate\Database\Console\Seeds\SeedCommand' => \Illuminate\Database\Console\Seeds\SeedCommand::class,
             'Illuminate\Database\Console\Seeds\SeederMakeCommand' => \Illuminate\Database\Console\Seeds\SeederMakeCommand::class,
             'Illuminate\Database\Console\WipeCommand' => \Illuminate\Database\Console\WipeCommand::class,
+            'Illuminate\Foundation\Console\AboutCommand' => \Illuminate\Foundation\Console\AboutCommand::class,
             'Illuminate\Foundation\Console\CastMakeCommand' => \Illuminate\Foundation\Console\CastMakeCommand::class,
             'Illuminate\Foundation\Console\ChannelMakeCommand' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
             'Illuminate\Foundation\Console\ClearCompiledCommand' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
@@ -89,6 +92,7 @@ namespace PHPSTORM_META {
             'Illuminate\Foundation\Console\RuleMakeCommand' => \Illuminate\Foundation\Console\RuleMakeCommand::class,
             'Illuminate\Foundation\Console\ScopeMakeCommand' => \Illuminate\Foundation\Console\ScopeMakeCommand::class,
             'Illuminate\Foundation\Console\ServeCommand' => \Illuminate\Foundation\Console\ServeCommand::class,
+            'Illuminate\Foundation\Console\ShowModelCommand' => \Illuminate\Foundation\Console\ShowModelCommand::class,
             'Illuminate\Foundation\Console\StorageLinkCommand' => \Illuminate\Foundation\Console\StorageLinkCommand::class,
             'Illuminate\Foundation\Console\StubPublishCommand' => \Illuminate\Foundation\Console\StubPublishCommand::class,
             'Illuminate\Foundation\Console\TestMakeCommand' => \Illuminate\Foundation\Console\TestMakeCommand::class,
@@ -191,6 +195,8 @@ namespace PHPSTORM_META {
         ]));
     override(\Illuminate\Container\Container::makeWith(0), map([
         '' => '@',
+            'Diglactic\Breadcrumbs\Generator' => \Diglactic\Breadcrumbs\Generator::class,
+            'Diglactic\Breadcrumbs\Manager' => \Diglactic\Breadcrumbs\Manager::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'Illuminate\Auth\Middleware\RequirePassword' => \Illuminate\Auth\Middleware\RequirePassword::class,
             'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
@@ -234,6 +240,7 @@ namespace PHPSTORM_META {
             'Illuminate\Database\Console\Seeds\SeedCommand' => \Illuminate\Database\Console\Seeds\SeedCommand::class,
             'Illuminate\Database\Console\Seeds\SeederMakeCommand' => \Illuminate\Database\Console\Seeds\SeederMakeCommand::class,
             'Illuminate\Database\Console\WipeCommand' => \Illuminate\Database\Console\WipeCommand::class,
+            'Illuminate\Foundation\Console\AboutCommand' => \Illuminate\Foundation\Console\AboutCommand::class,
             'Illuminate\Foundation\Console\CastMakeCommand' => \Illuminate\Foundation\Console\CastMakeCommand::class,
             'Illuminate\Foundation\Console\ChannelMakeCommand' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
             'Illuminate\Foundation\Console\ClearCompiledCommand' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
@@ -269,6 +276,7 @@ namespace PHPSTORM_META {
             'Illuminate\Foundation\Console\RuleMakeCommand' => \Illuminate\Foundation\Console\RuleMakeCommand::class,
             'Illuminate\Foundation\Console\ScopeMakeCommand' => \Illuminate\Foundation\Console\ScopeMakeCommand::class,
             'Illuminate\Foundation\Console\ServeCommand' => \Illuminate\Foundation\Console\ServeCommand::class,
+            'Illuminate\Foundation\Console\ShowModelCommand' => \Illuminate\Foundation\Console\ShowModelCommand::class,
             'Illuminate\Foundation\Console\StorageLinkCommand' => \Illuminate\Foundation\Console\StorageLinkCommand::class,
             'Illuminate\Foundation\Console\StubPublishCommand' => \Illuminate\Foundation\Console\StubPublishCommand::class,
             'Illuminate\Foundation\Console\TestMakeCommand' => \Illuminate\Foundation\Console\TestMakeCommand::class,
@@ -371,6 +379,8 @@ namespace PHPSTORM_META {
         ]));
     override(\Illuminate\Contracts\Container\Container::get(0), map([
         '' => '@',
+            'Diglactic\Breadcrumbs\Generator' => \Diglactic\Breadcrumbs\Generator::class,
+            'Diglactic\Breadcrumbs\Manager' => \Diglactic\Breadcrumbs\Manager::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'Illuminate\Auth\Middleware\RequirePassword' => \Illuminate\Auth\Middleware\RequirePassword::class,
             'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
@@ -414,6 +424,7 @@ namespace PHPSTORM_META {
             'Illuminate\Database\Console\Seeds\SeedCommand' => \Illuminate\Database\Console\Seeds\SeedCommand::class,
             'Illuminate\Database\Console\Seeds\SeederMakeCommand' => \Illuminate\Database\Console\Seeds\SeederMakeCommand::class,
             'Illuminate\Database\Console\WipeCommand' => \Illuminate\Database\Console\WipeCommand::class,
+            'Illuminate\Foundation\Console\AboutCommand' => \Illuminate\Foundation\Console\AboutCommand::class,
             'Illuminate\Foundation\Console\CastMakeCommand' => \Illuminate\Foundation\Console\CastMakeCommand::class,
             'Illuminate\Foundation\Console\ChannelMakeCommand' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
             'Illuminate\Foundation\Console\ClearCompiledCommand' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
@@ -449,6 +460,7 @@ namespace PHPSTORM_META {
             'Illuminate\Foundation\Console\RuleMakeCommand' => \Illuminate\Foundation\Console\RuleMakeCommand::class,
             'Illuminate\Foundation\Console\ScopeMakeCommand' => \Illuminate\Foundation\Console\ScopeMakeCommand::class,
             'Illuminate\Foundation\Console\ServeCommand' => \Illuminate\Foundation\Console\ServeCommand::class,
+            'Illuminate\Foundation\Console\ShowModelCommand' => \Illuminate\Foundation\Console\ShowModelCommand::class,
             'Illuminate\Foundation\Console\StorageLinkCommand' => \Illuminate\Foundation\Console\StorageLinkCommand::class,
             'Illuminate\Foundation\Console\StubPublishCommand' => \Illuminate\Foundation\Console\StubPublishCommand::class,
             'Illuminate\Foundation\Console\TestMakeCommand' => \Illuminate\Foundation\Console\TestMakeCommand::class,
@@ -551,6 +563,8 @@ namespace PHPSTORM_META {
         ]));
     override(\Illuminate\Contracts\Container\Container::make(0), map([
         '' => '@',
+            'Diglactic\Breadcrumbs\Generator' => \Diglactic\Breadcrumbs\Generator::class,
+            'Diglactic\Breadcrumbs\Manager' => \Diglactic\Breadcrumbs\Manager::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'Illuminate\Auth\Middleware\RequirePassword' => \Illuminate\Auth\Middleware\RequirePassword::class,
             'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
@@ -594,6 +608,7 @@ namespace PHPSTORM_META {
             'Illuminate\Database\Console\Seeds\SeedCommand' => \Illuminate\Database\Console\Seeds\SeedCommand::class,
             'Illuminate\Database\Console\Seeds\SeederMakeCommand' => \Illuminate\Database\Console\Seeds\SeederMakeCommand::class,
             'Illuminate\Database\Console\WipeCommand' => \Illuminate\Database\Console\WipeCommand::class,
+            'Illuminate\Foundation\Console\AboutCommand' => \Illuminate\Foundation\Console\AboutCommand::class,
             'Illuminate\Foundation\Console\CastMakeCommand' => \Illuminate\Foundation\Console\CastMakeCommand::class,
             'Illuminate\Foundation\Console\ChannelMakeCommand' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
             'Illuminate\Foundation\Console\ClearCompiledCommand' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
@@ -629,6 +644,7 @@ namespace PHPSTORM_META {
             'Illuminate\Foundation\Console\RuleMakeCommand' => \Illuminate\Foundation\Console\RuleMakeCommand::class,
             'Illuminate\Foundation\Console\ScopeMakeCommand' => \Illuminate\Foundation\Console\ScopeMakeCommand::class,
             'Illuminate\Foundation\Console\ServeCommand' => \Illuminate\Foundation\Console\ServeCommand::class,
+            'Illuminate\Foundation\Console\ShowModelCommand' => \Illuminate\Foundation\Console\ShowModelCommand::class,
             'Illuminate\Foundation\Console\StorageLinkCommand' => \Illuminate\Foundation\Console\StorageLinkCommand::class,
             'Illuminate\Foundation\Console\StubPublishCommand' => \Illuminate\Foundation\Console\StubPublishCommand::class,
             'Illuminate\Foundation\Console\TestMakeCommand' => \Illuminate\Foundation\Console\TestMakeCommand::class,
@@ -731,6 +747,8 @@ namespace PHPSTORM_META {
         ]));
     override(\Illuminate\Contracts\Container\Container::makeWith(0), map([
         '' => '@',
+            'Diglactic\Breadcrumbs\Generator' => \Diglactic\Breadcrumbs\Generator::class,
+            'Diglactic\Breadcrumbs\Manager' => \Diglactic\Breadcrumbs\Manager::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'Illuminate\Auth\Middleware\RequirePassword' => \Illuminate\Auth\Middleware\RequirePassword::class,
             'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
@@ -774,6 +792,7 @@ namespace PHPSTORM_META {
             'Illuminate\Database\Console\Seeds\SeedCommand' => \Illuminate\Database\Console\Seeds\SeedCommand::class,
             'Illuminate\Database\Console\Seeds\SeederMakeCommand' => \Illuminate\Database\Console\Seeds\SeederMakeCommand::class,
             'Illuminate\Database\Console\WipeCommand' => \Illuminate\Database\Console\WipeCommand::class,
+            'Illuminate\Foundation\Console\AboutCommand' => \Illuminate\Foundation\Console\AboutCommand::class,
             'Illuminate\Foundation\Console\CastMakeCommand' => \Illuminate\Foundation\Console\CastMakeCommand::class,
             'Illuminate\Foundation\Console\ChannelMakeCommand' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
             'Illuminate\Foundation\Console\ClearCompiledCommand' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
@@ -809,6 +828,7 @@ namespace PHPSTORM_META {
             'Illuminate\Foundation\Console\RuleMakeCommand' => \Illuminate\Foundation\Console\RuleMakeCommand::class,
             'Illuminate\Foundation\Console\ScopeMakeCommand' => \Illuminate\Foundation\Console\ScopeMakeCommand::class,
             'Illuminate\Foundation\Console\ServeCommand' => \Illuminate\Foundation\Console\ServeCommand::class,
+            'Illuminate\Foundation\Console\ShowModelCommand' => \Illuminate\Foundation\Console\ShowModelCommand::class,
             'Illuminate\Foundation\Console\StorageLinkCommand' => \Illuminate\Foundation\Console\StorageLinkCommand::class,
             'Illuminate\Foundation\Console\StubPublishCommand' => \Illuminate\Foundation\Console\StubPublishCommand::class,
             'Illuminate\Foundation\Console\TestMakeCommand' => \Illuminate\Foundation\Console\TestMakeCommand::class,
@@ -911,6 +931,8 @@ namespace PHPSTORM_META {
         ]));
     override(\App::get(0), map([
         '' => '@',
+            'Diglactic\Breadcrumbs\Generator' => \Diglactic\Breadcrumbs\Generator::class,
+            'Diglactic\Breadcrumbs\Manager' => \Diglactic\Breadcrumbs\Manager::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'Illuminate\Auth\Middleware\RequirePassword' => \Illuminate\Auth\Middleware\RequirePassword::class,
             'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
@@ -954,6 +976,7 @@ namespace PHPSTORM_META {
             'Illuminate\Database\Console\Seeds\SeedCommand' => \Illuminate\Database\Console\Seeds\SeedCommand::class,
             'Illuminate\Database\Console\Seeds\SeederMakeCommand' => \Illuminate\Database\Console\Seeds\SeederMakeCommand::class,
             'Illuminate\Database\Console\WipeCommand' => \Illuminate\Database\Console\WipeCommand::class,
+            'Illuminate\Foundation\Console\AboutCommand' => \Illuminate\Foundation\Console\AboutCommand::class,
             'Illuminate\Foundation\Console\CastMakeCommand' => \Illuminate\Foundation\Console\CastMakeCommand::class,
             'Illuminate\Foundation\Console\ChannelMakeCommand' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
             'Illuminate\Foundation\Console\ClearCompiledCommand' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
@@ -989,6 +1012,7 @@ namespace PHPSTORM_META {
             'Illuminate\Foundation\Console\RuleMakeCommand' => \Illuminate\Foundation\Console\RuleMakeCommand::class,
             'Illuminate\Foundation\Console\ScopeMakeCommand' => \Illuminate\Foundation\Console\ScopeMakeCommand::class,
             'Illuminate\Foundation\Console\ServeCommand' => \Illuminate\Foundation\Console\ServeCommand::class,
+            'Illuminate\Foundation\Console\ShowModelCommand' => \Illuminate\Foundation\Console\ShowModelCommand::class,
             'Illuminate\Foundation\Console\StorageLinkCommand' => \Illuminate\Foundation\Console\StorageLinkCommand::class,
             'Illuminate\Foundation\Console\StubPublishCommand' => \Illuminate\Foundation\Console\StubPublishCommand::class,
             'Illuminate\Foundation\Console\TestMakeCommand' => \Illuminate\Foundation\Console\TestMakeCommand::class,
@@ -1091,6 +1115,8 @@ namespace PHPSTORM_META {
         ]));
     override(\App::make(0), map([
         '' => '@',
+            'Diglactic\Breadcrumbs\Generator' => \Diglactic\Breadcrumbs\Generator::class,
+            'Diglactic\Breadcrumbs\Manager' => \Diglactic\Breadcrumbs\Manager::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'Illuminate\Auth\Middleware\RequirePassword' => \Illuminate\Auth\Middleware\RequirePassword::class,
             'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
@@ -1134,6 +1160,7 @@ namespace PHPSTORM_META {
             'Illuminate\Database\Console\Seeds\SeedCommand' => \Illuminate\Database\Console\Seeds\SeedCommand::class,
             'Illuminate\Database\Console\Seeds\SeederMakeCommand' => \Illuminate\Database\Console\Seeds\SeederMakeCommand::class,
             'Illuminate\Database\Console\WipeCommand' => \Illuminate\Database\Console\WipeCommand::class,
+            'Illuminate\Foundation\Console\AboutCommand' => \Illuminate\Foundation\Console\AboutCommand::class,
             'Illuminate\Foundation\Console\CastMakeCommand' => \Illuminate\Foundation\Console\CastMakeCommand::class,
             'Illuminate\Foundation\Console\ChannelMakeCommand' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
             'Illuminate\Foundation\Console\ClearCompiledCommand' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
@@ -1169,6 +1196,7 @@ namespace PHPSTORM_META {
             'Illuminate\Foundation\Console\RuleMakeCommand' => \Illuminate\Foundation\Console\RuleMakeCommand::class,
             'Illuminate\Foundation\Console\ScopeMakeCommand' => \Illuminate\Foundation\Console\ScopeMakeCommand::class,
             'Illuminate\Foundation\Console\ServeCommand' => \Illuminate\Foundation\Console\ServeCommand::class,
+            'Illuminate\Foundation\Console\ShowModelCommand' => \Illuminate\Foundation\Console\ShowModelCommand::class,
             'Illuminate\Foundation\Console\StorageLinkCommand' => \Illuminate\Foundation\Console\StorageLinkCommand::class,
             'Illuminate\Foundation\Console\StubPublishCommand' => \Illuminate\Foundation\Console\StubPublishCommand::class,
             'Illuminate\Foundation\Console\TestMakeCommand' => \Illuminate\Foundation\Console\TestMakeCommand::class,
@@ -1271,6 +1299,8 @@ namespace PHPSTORM_META {
         ]));
     override(\App::makeWith(0), map([
         '' => '@',
+            'Diglactic\Breadcrumbs\Generator' => \Diglactic\Breadcrumbs\Generator::class,
+            'Diglactic\Breadcrumbs\Manager' => \Diglactic\Breadcrumbs\Manager::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'Illuminate\Auth\Middleware\RequirePassword' => \Illuminate\Auth\Middleware\RequirePassword::class,
             'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
@@ -1314,6 +1344,7 @@ namespace PHPSTORM_META {
             'Illuminate\Database\Console\Seeds\SeedCommand' => \Illuminate\Database\Console\Seeds\SeedCommand::class,
             'Illuminate\Database\Console\Seeds\SeederMakeCommand' => \Illuminate\Database\Console\Seeds\SeederMakeCommand::class,
             'Illuminate\Database\Console\WipeCommand' => \Illuminate\Database\Console\WipeCommand::class,
+            'Illuminate\Foundation\Console\AboutCommand' => \Illuminate\Foundation\Console\AboutCommand::class,
             'Illuminate\Foundation\Console\CastMakeCommand' => \Illuminate\Foundation\Console\CastMakeCommand::class,
             'Illuminate\Foundation\Console\ChannelMakeCommand' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
             'Illuminate\Foundation\Console\ClearCompiledCommand' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
@@ -1349,6 +1380,7 @@ namespace PHPSTORM_META {
             'Illuminate\Foundation\Console\RuleMakeCommand' => \Illuminate\Foundation\Console\RuleMakeCommand::class,
             'Illuminate\Foundation\Console\ScopeMakeCommand' => \Illuminate\Foundation\Console\ScopeMakeCommand::class,
             'Illuminate\Foundation\Console\ServeCommand' => \Illuminate\Foundation\Console\ServeCommand::class,
+            'Illuminate\Foundation\Console\ShowModelCommand' => \Illuminate\Foundation\Console\ShowModelCommand::class,
             'Illuminate\Foundation\Console\StorageLinkCommand' => \Illuminate\Foundation\Console\StorageLinkCommand::class,
             'Illuminate\Foundation\Console\StubPublishCommand' => \Illuminate\Foundation\Console\StubPublishCommand::class,
             'Illuminate\Foundation\Console\TestMakeCommand' => \Illuminate\Foundation\Console\TestMakeCommand::class,
@@ -1451,6 +1483,8 @@ namespace PHPSTORM_META {
         ]));
     override(\app(0), map([
         '' => '@',
+            'Diglactic\Breadcrumbs\Generator' => \Diglactic\Breadcrumbs\Generator::class,
+            'Diglactic\Breadcrumbs\Manager' => \Diglactic\Breadcrumbs\Manager::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'Illuminate\Auth\Middleware\RequirePassword' => \Illuminate\Auth\Middleware\RequirePassword::class,
             'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
@@ -1494,6 +1528,7 @@ namespace PHPSTORM_META {
             'Illuminate\Database\Console\Seeds\SeedCommand' => \Illuminate\Database\Console\Seeds\SeedCommand::class,
             'Illuminate\Database\Console\Seeds\SeederMakeCommand' => \Illuminate\Database\Console\Seeds\SeederMakeCommand::class,
             'Illuminate\Database\Console\WipeCommand' => \Illuminate\Database\Console\WipeCommand::class,
+            'Illuminate\Foundation\Console\AboutCommand' => \Illuminate\Foundation\Console\AboutCommand::class,
             'Illuminate\Foundation\Console\CastMakeCommand' => \Illuminate\Foundation\Console\CastMakeCommand::class,
             'Illuminate\Foundation\Console\ChannelMakeCommand' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
             'Illuminate\Foundation\Console\ClearCompiledCommand' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
@@ -1529,6 +1564,7 @@ namespace PHPSTORM_META {
             'Illuminate\Foundation\Console\RuleMakeCommand' => \Illuminate\Foundation\Console\RuleMakeCommand::class,
             'Illuminate\Foundation\Console\ScopeMakeCommand' => \Illuminate\Foundation\Console\ScopeMakeCommand::class,
             'Illuminate\Foundation\Console\ServeCommand' => \Illuminate\Foundation\Console\ServeCommand::class,
+            'Illuminate\Foundation\Console\ShowModelCommand' => \Illuminate\Foundation\Console\ShowModelCommand::class,
             'Illuminate\Foundation\Console\StorageLinkCommand' => \Illuminate\Foundation\Console\StorageLinkCommand::class,
             'Illuminate\Foundation\Console\StubPublishCommand' => \Illuminate\Foundation\Console\StubPublishCommand::class,
             'Illuminate\Foundation\Console\TestMakeCommand' => \Illuminate\Foundation\Console\TestMakeCommand::class,
@@ -1631,6 +1667,8 @@ namespace PHPSTORM_META {
         ]));
     override(\resolve(0), map([
         '' => '@',
+            'Diglactic\Breadcrumbs\Generator' => \Diglactic\Breadcrumbs\Generator::class,
+            'Diglactic\Breadcrumbs\Manager' => \Diglactic\Breadcrumbs\Manager::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'Illuminate\Auth\Middleware\RequirePassword' => \Illuminate\Auth\Middleware\RequirePassword::class,
             'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
@@ -1674,6 +1712,7 @@ namespace PHPSTORM_META {
             'Illuminate\Database\Console\Seeds\SeedCommand' => \Illuminate\Database\Console\Seeds\SeedCommand::class,
             'Illuminate\Database\Console\Seeds\SeederMakeCommand' => \Illuminate\Database\Console\Seeds\SeederMakeCommand::class,
             'Illuminate\Database\Console\WipeCommand' => \Illuminate\Database\Console\WipeCommand::class,
+            'Illuminate\Foundation\Console\AboutCommand' => \Illuminate\Foundation\Console\AboutCommand::class,
             'Illuminate\Foundation\Console\CastMakeCommand' => \Illuminate\Foundation\Console\CastMakeCommand::class,
             'Illuminate\Foundation\Console\ChannelMakeCommand' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
             'Illuminate\Foundation\Console\ClearCompiledCommand' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
@@ -1709,6 +1748,7 @@ namespace PHPSTORM_META {
             'Illuminate\Foundation\Console\RuleMakeCommand' => \Illuminate\Foundation\Console\RuleMakeCommand::class,
             'Illuminate\Foundation\Console\ScopeMakeCommand' => \Illuminate\Foundation\Console\ScopeMakeCommand::class,
             'Illuminate\Foundation\Console\ServeCommand' => \Illuminate\Foundation\Console\ServeCommand::class,
+            'Illuminate\Foundation\Console\ShowModelCommand' => \Illuminate\Foundation\Console\ShowModelCommand::class,
             'Illuminate\Foundation\Console\StorageLinkCommand' => \Illuminate\Foundation\Console\StorageLinkCommand::class,
             'Illuminate\Foundation\Console\StubPublishCommand' => \Illuminate\Foundation\Console\StubPublishCommand::class,
             'Illuminate\Foundation\Console\TestMakeCommand' => \Illuminate\Foundation\Console\TestMakeCommand::class,
@@ -1811,6 +1851,8 @@ namespace PHPSTORM_META {
         ]));
     override(\Psr\Container\ContainerInterface::get(0), map([
         '' => '@',
+            'Diglactic\Breadcrumbs\Generator' => \Diglactic\Breadcrumbs\Generator::class,
+            'Diglactic\Breadcrumbs\Manager' => \Diglactic\Breadcrumbs\Manager::class,
             'Illuminate\Auth\Console\ClearResetsCommand' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'Illuminate\Auth\Middleware\RequirePassword' => \Illuminate\Auth\Middleware\RequirePassword::class,
             'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
@@ -1854,6 +1896,7 @@ namespace PHPSTORM_META {
             'Illuminate\Database\Console\Seeds\SeedCommand' => \Illuminate\Database\Console\Seeds\SeedCommand::class,
             'Illuminate\Database\Console\Seeds\SeederMakeCommand' => \Illuminate\Database\Console\Seeds\SeederMakeCommand::class,
             'Illuminate\Database\Console\WipeCommand' => \Illuminate\Database\Console\WipeCommand::class,
+            'Illuminate\Foundation\Console\AboutCommand' => \Illuminate\Foundation\Console\AboutCommand::class,
             'Illuminate\Foundation\Console\CastMakeCommand' => \Illuminate\Foundation\Console\CastMakeCommand::class,
             'Illuminate\Foundation\Console\ChannelMakeCommand' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
             'Illuminate\Foundation\Console\ClearCompiledCommand' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
@@ -1889,6 +1932,7 @@ namespace PHPSTORM_META {
             'Illuminate\Foundation\Console\RuleMakeCommand' => \Illuminate\Foundation\Console\RuleMakeCommand::class,
             'Illuminate\Foundation\Console\ScopeMakeCommand' => \Illuminate\Foundation\Console\ScopeMakeCommand::class,
             'Illuminate\Foundation\Console\ServeCommand' => \Illuminate\Foundation\Console\ServeCommand::class,
+            'Illuminate\Foundation\Console\ShowModelCommand' => \Illuminate\Foundation\Console\ShowModelCommand::class,
             'Illuminate\Foundation\Console\StorageLinkCommand' => \Illuminate\Foundation\Console\StorageLinkCommand::class,
             'Illuminate\Foundation\Console\StubPublishCommand' => \Illuminate\Foundation\Console\StubPublishCommand::class,
             'Illuminate\Foundation\Console\TestMakeCommand' => \Illuminate\Foundation\Console\TestMakeCommand::class,

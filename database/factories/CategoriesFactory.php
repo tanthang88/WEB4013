@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Categories>
@@ -17,7 +18,8 @@ class CategoriesFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name'=> Str::ucfirst(fake()->words(2, true)),
+            'url'=>fake()->slug(5,false)
         ];
     }
 }

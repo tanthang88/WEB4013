@@ -1,8 +1,14 @@
 {
+    "name": "web4013",
+    "version": "1.0.0",
+    "repository": "https://github.com/tanthang88/WEB4013.git",
+    "author": "PhamTanThang <phamtanthang88@gmail.com>",
+    "license": "MIT",
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build --watch",
+        "scss": "sass --watch resources/scss:resources/css"
     },
     "devDependencies": {
         "axios": "^0.25",
@@ -10,5 +16,8 @@
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
         "vite": "^2.9.11"
+    },
+    "dependencies": {
+        "bootstrap": "^5.1.3"
     }
 }

@@ -8,7 +8,6 @@ $(document).ready(function () {
     let valOneSubCategories = undefined;
     const modalDelete = new bootstrap.Modal($("#modalSubCategoryDelete"))
     const modalUpdate = new bootstrap.Modal($("#modalSubCategoryUpdate"))
-    const valParentCategories = $(".subCategories__parentCategories");
     // const options = $('.subCategories__options')
     /*Variable form update*/
     const inputFormUpdate = $('input[name="nameSubCategories"]')
@@ -36,7 +35,6 @@ $(document).ready(function () {
                 data: {id: valOneSubCategories},
                 async: false,
                 success(data) {
-                    console.log(data)
                     if (data.message) {
                         toast('success', data.message)
                         subCategoryElement.each(function () {
@@ -47,7 +45,6 @@ $(document).ready(function () {
                     }
                 },
                 error(data) {
-                    console.log(data)
                     const error = data.responseJSON.errors
                     for (const prop in error) {
                         console.log(`${prop}: ${error[prop]}`);
@@ -104,7 +101,7 @@ $(document).ready(function () {
                 var renderOptionSelected = ''
                 dataAllCategories.map((item)=>{
                     item.id === dataCategories.id ? renderOptionSelected += `<option class="subCategories__options" value="${item.id}" selected>${item.name}</option>` : renderOptionSelected += `<option class="subCategories__options" value="${item.id}">${item.name}</option>`
-                    
+
                 })
                 selectElement.html(renderOptionSelected)
             },
@@ -126,17 +123,6 @@ $(document).ready(function () {
             }
         })
 
-/*        options.each(function () {
-            if($(this).data('name-categories') === valParentCategories.data('name')){
-                $(this).prop('selected', 'selected')
-            }
-        })
-
-        $('select[name="categories"]').change(function () {
-            console.log($('select option:selected'))
-            console.log($(this).val())
-        })*/
-
         $(".btnAcceptUpdate").on("click" ,function (e) {
             e.preventDefault()
             if (inputFormUpdate.val().length > 0){
@@ -153,7 +139,6 @@ $(document).ready(function () {
                     dataType: 'json',
                     async:false,
                     success: function (data) {
-                        console.log(data)
                         if (data.success){
                             toast("success", data.success)
                         }

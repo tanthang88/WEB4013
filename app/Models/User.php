@@ -46,6 +46,8 @@ use Laravel\Sanctum\HasApiTokens;
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePhone($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRole($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUsername($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Posts[] $posts
+ * @property-read int|null $posts_count
  */
 class User extends Authenticatable
 {
@@ -58,26 +60,37 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'username',
         'email',
         'password',
+        'phone',
+        'avatar',
+        'is_active',
+        'role'
     ];
+
+    public function posts()
+    {
+        return $this->hasMany(Posts::class);
+    }
+
 
     /**
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>
      */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    /*    protected $hidden = [
+            'password',
+            'remember_token',
+        ];*/
 
     /**
      * The attributes that should be cast.
      *
      * @var array<string, string>
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    /*    protected $casts = [
+            'email_verified_at' => 'datetime',
+        ];*/
 }

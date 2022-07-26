@@ -2,6 +2,7 @@
 use Diglactic\Breadcrumbs\Breadcrumbs;
 use Diglactic\Breadcrumbs\Generator as BreadcrumbTrail;
 use App\Models\Categories;
+use App\Models\Posts;
 
 /*Admin Breadcrums*/
 Breadcrumbs::for('dashboard', function (BreadcrumbTrail $trail) {
@@ -18,6 +19,18 @@ Breadcrumbs::for('categories', function (BreadcrumbTrail $trail) {
 Breadcrumbs::for('sub-categories', function (BreadcrumbTrail $trail){
     $trail->parent('dashboard');
     $trail->push('Chuyên Mục', route('SubCategories'));
+});
+Breadcrumbs::for('posts', function (BreadcrumbTrail $trail){
+    $trail->parent('dashboard');
+    $trail->push('Bài Viết', route('Posts'));
+});
+Breadcrumbs::for('editPost', function (BreadcrumbTrail $trail, $post){
+    $trail->parent('posts');
+    $trail->push(Str::title('cập nhật bài viết - '.$post[0]->title), route('EditPost', [$post[0]->id]));
+});
+Breadcrumbs::for('addPost', function (BreadcrumbTrail $trail) {
+    $trail->parent('posts');
+    $trail->push(Str::title('thêm bài viết mới'), route('FormAddPost'));
 });
 /*
 Breadcrumbs::for('category', function (BreadcrumbTrail $trail, $category) {

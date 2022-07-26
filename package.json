@@ -18,6 +18,8 @@
         "vite": "^2.9.11"
     },
     "dependencies": {
+        "@ckeditor/ckeditor5-build-classic": "^34.2.0",
+        "@ckeditor/ckeditor5-upload": "^34.2.0",
         "bootstrap": "^5.1.3"
     }
 }

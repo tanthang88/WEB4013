@@ -46,9 +46,7 @@
                     </td>
                     <td>{{Str::slug($subCategories->url)}}</td>
                     <td>
-                        <span class="subCategories__parentCategories" data-name="{{$subCategories->categories->name}}">
                             {{$subCategories->categories->name}}
-                        </span>
                     </td>
                     <td>{{$subCategories->created_at->format('H:i:s d/m/Y')}}</td>
                     <td>{{$subCategories->updated_at->format('H:i:s d/m/Y')}}</td>
@@ -116,15 +114,7 @@
                     <div class="modal-body">
                         <div class="mb-3">
                             <label class="col-form-label">Danh mục:</label>
-                            <select name="categories" id="" class="form-select">
-{{--                                <option class="subCategories__options" value="0">Chọn danh mục cha</option>--}}
-                                    {{-- @foreach($listAllSubCategories as $subCategories)
-                                        <option class="subCategories__options"
-                                                data-name-categories="{{$subCategories->categories->name}}"
-                                                value="{{$subCategories->categories->id}}">{{$subCategories->categories->name}}</option>
-                                    @endforeach --}}
-                            </select>
-                            {{--<p class="alert alert-danger my-2 fw-bold text-danger nameSubCategories__error"></p>--}}
+                            <select name="categories" id="" class="form-select"></select>
                         </div>
                         <div class="mb-3">
                             <label for="recipient-name" class="col-form-label">Tên chuyên mục:</label>

@@ -26,7 +26,7 @@
                 </a>
                 <div class="collapse" id="collapsePosts" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="">Quản Lý Bài Viết</a>
+                            <a class="nav-link" href="{{route('Posts')}}">Quản Lý Bài Viết</a>
                         {{--<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                             Authentication
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>

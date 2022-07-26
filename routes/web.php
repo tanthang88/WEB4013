@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\SubCategoriesController;
+use App\Http\Controllers\PostsController;
+use App\Http\Controllers\FileUploadController;
 
 
 
@@ -39,5 +41,15 @@ Route::prefix('admin')->group(function (){
     Route::post('sub-categories/delete',[SubCategoriesController::class,'deleteSubCategories'])->name('DeleteSubCategories');
     Route::post('sub-categories/update',[SubCategoriesController::class,'updateSubCategories'])->name('UpdateSubCategories');
     Route::post('sub-categories/categories',[SubCategoriesController::class, 'getDataCategories']);
+
+    Route::get('posts',[PostsController::class,'index'])->name('Posts');
+    Route::get('posts/{idPost}/edit', [PostsController::class,'showFormEditPost'])->name('EditPost');
+    Route::get('posts/add',[PostsController::class,'showFormAddPost'])->name('FormAddPost');
+    Route::get('posts/{idPost}/delete', [PostsController::class,'handleDeletePost'])->name('DeletePost');
+    Route::post('posts/add',[PostsController::class,'handleAddPost'])->name('AddPost');
+    Route::post('posts/{idPost}/edit', [PostsController::class,'handleUpdatePost'])->name('UpdatePost');
+
+
+    Route::post('image/upload', [FileUploadController::class,'storeFormUpload'])->name('UploadImage');
 });
 

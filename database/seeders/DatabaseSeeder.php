@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
             CategoriesSeeder::class,
             SubCategoriesSeeder::class,
             UsersSeeder::class,
-            PostsSeeder::class
+            PostsSeeder::class,
+            CommentsSeeder::class
         ]);
     }
 }

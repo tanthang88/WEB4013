@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\SubCategories;
+use App\Models\Comments;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class SubCategoriesSeeder extends Seeder
+class CommentsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,6 +15,6 @@ class SubCategoriesSeeder extends Seeder
      */
     public function run()
     {
-        SubCategories::factory()->count(25)->create();
+        Comments::factory(50)->create();
     }
 }

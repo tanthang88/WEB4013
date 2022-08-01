@@ -48,6 +48,8 @@ use Laravel\Sanctum\HasApiTokens;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUsername($value)
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Posts[] $posts
  * @property-read int|null $posts_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Comments[] $comments
+ * @property-read int|null $comments_count
  */
 class User extends Authenticatable
 {
@@ -73,17 +75,20 @@ class User extends Authenticatable
     {
         return $this->hasMany(Posts::class);
     }
-
+    public function comments()
+    {
+        return $this->hasMany(Comments::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>
      */
-    /*    protected $hidden = [
+        protected $hidden = [
             'password',
             'remember_token',
-        ];*/
+        ];
 
     /**
      * The attributes that should be cast.

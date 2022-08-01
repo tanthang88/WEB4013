@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\RuleAddPost;
 use App\Http\Requests\RuleUpdatePost;
 use App\Models\Posts;
 use App\Models\SubCategories;
 use Illuminate\Http\Request;
-use App\Http\Controllers\FileUploadController as FileUploadController;
+use App\Http\Controllers\Admin\FileUploadController as FileUploadController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
@@ -16,9 +17,6 @@ class PostsController extends Controller
 {
     public function index()
     {
-        $user = Auth::user();
-        dd($user);
-
         $title = "quản lí bài viết";
         $listPosts = Posts::with(['user', 'subCategories'])->orderByDesc('created_at')->paginate(5);
         return view('admin.posts', compact('listPosts', 'title'));

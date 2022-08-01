@@ -35,23 +35,38 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Posts whereUserId($value)
  * @mixin \Eloquent
  * @property-read \App\Models\SubCategories $subCategories
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Comments[] $comments
+ * @property-read int|null $comments_count
+ * @property int $categories_id
+ * @property-read \App\Models\Categories $categories
+ * @method static \Illuminate\Database\Eloquent\Builder|Posts whereCategoriesId($value)
  */
 class Posts extends Model
 {
     use HasFactory;
     protected $fillable = [
         'title',
+        'short_content',
         'content',
         'image',
         'slug',
         'is_active',
         'sub_categories_id',
-        'user_id'
+        'user_id',
+        'categories_id'
     ];
     public function user(){
         return $this->belongsTo(User::class);
     }
     public function subCategories(){
         return $this->belongsTo(SubCategories::class);
+    }
+    public function categories()
+    {
+        return $this->belongsTo(Categories::class);
+    }
+    public function comments()
+    {
+        return $this->hasMany(Comments::class);
     }
 }

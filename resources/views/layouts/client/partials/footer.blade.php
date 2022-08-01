@@ -101,7 +101,9 @@
                     <li><a href="#">Sitemap</a></li>
                   </ul>
                   <p class="font-weight-medium">
-                    © 2020 <a href="https://www.bootstrapdash.com/" target="_blank" class="text-dark">@ BootstrapDash</a>, Inc.All Rights Reserved.
+                    © {{\Carbon\Carbon::now()->year}}
+                      Toàn bộ bản quyền thuộc
+                      <a href="https://www.facebook.com/phamtanthang08/" target="_blank" class="text-dark"> VnExpressFake</a>
                   </p>
                 </div>
               </div>

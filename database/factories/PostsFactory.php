@@ -19,12 +19,14 @@ class PostsFactory extends Factory
     {
         return [
             'title'=>Str::title(fake()->sentence()),
+            'short_content'=>fake()->text(150),
             'content'=>fake()->text(),
-            'image'=>fake()->imageUrl(200,200),
+            'image'=>fake()->imageUrl(300,300),
             'slug'=>fake()->slug(),
             'is_active'=>fake()->boolean(),
             'sub_categories_id'=>random_int(1, 20),
-            'user_id'=>random_int(1, 10)
+            'user_id'=>random_int(1, 10),
+            'categories_id'=>fake()->numberBetween(1,6)
         ];
     }
 }

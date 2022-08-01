@@ -28,6 +28,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property-read int|null $categories_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\SubCategories[] $subCategories
  * @property-read int|null $sub_categories_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Posts[] $posts
+ * @property-read int|null $posts_count
  */
 class Categories extends Model
 {
@@ -50,5 +52,9 @@ class Categories extends Model
     public function subCategories()
     {
         return $this->hasMany(SubCategories::class, 'categories_id', 'id');
+    }
+    public function posts()
+    {
+        return $this->hasMany(Posts::class);
     }
 }

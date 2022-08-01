@@ -1,17 +1,15 @@
 <?php
 
-use App\Models\Categories;
+use App\Http\Controllers\Admin\{AdminController,
+    CategoriesController,
+    FileUploadController,
+    PostsController,
+    SubCategoriesController};
+use App\Http\Controllers\Client\HomeController;
+
 use Illuminate\Support\Facades\Route;
 
-use Illuminate\Http\Request;
-/*List Controller*/
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\CategoriesController;
-use App\Http\Controllers\SubCategoriesController;
-use App\Http\Controllers\PostsController;
-use App\Http\Controllers\FileUploadController;
-
-
+/*List Admin Controller*/
 
 /*
 |--------------------------------------------------------------------------
@@ -24,9 +22,10 @@ use App\Http\Controllers\FileUploadController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class,'index']);
+
+
+
 Route::prefix('admin')->group(function (){
     Route::get('dashboard',[AdminController::class, 'index'])->name('Dashboard');
     /*Route::resource('categories',CategoriesController::class)->names([

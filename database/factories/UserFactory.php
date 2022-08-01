@@ -29,7 +29,7 @@ class UserFactory extends Factory
             'username' => fake()->userName(),
             'password' => fake()->password(6, 15),
             'email'=>fake()->email(),
-            'avatar'=>fake()->image(),
+            'avatar'=>fake()->imageUrl(100,100),
             'is_active'=>fake()->boolean(),
             'role'=>fake()->boolean()
         ];

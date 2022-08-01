@@ -20,7 +20,7 @@ class SubCategoriesFactory extends Factory
         return [
             'name'=>Str::ucfirst(fake()->words(2, true)),
             'url'=>fake()->slug(3),
-            'categories_id'=>random_int(1,15)
+            'categories_id'=>random_int(1,6)
         ];
     }
 }

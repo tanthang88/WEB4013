@@ -28,6 +28,7 @@ class RuleAddPost extends FormRequest
             'subcategories'=>['required'],
             'active'=>['required'],
             'content'=>['required'],
+            'short_content'=>['required'],
         ];
     }
     public function messages()
@@ -36,7 +37,8 @@ class RuleAddPost extends FormRequest
             'title.required'=>'Vui lòng nhập tiêu đề bài viết.',
             'subcategories.required'=>'Vui lòng chọn chuyên mục.',
             'active.required'=>'Vui lòng tích chọn trạng thái bài viết.',
-            'content.required'=>'Vui lòng nhập nội dung bài viết.'
+            'content.required'=>'Vui lòng nhập nội dung bài viết.',
+            'short_content.required'=>'Vui lòng nhập mô tả ngắn của bài viết.'
         ];
     }
 }

@@ -30,8 +30,8 @@ class UserFactory extends Factory
             'password' => bcrypt('tanthang88'),
             'email'=>fake()->email(),
             'avatar'=>fake()->imageUrl(100,100),
-            'is_active'=>fake()->boolean(),
-            'role'=>fake()->boolean()
+            'is_active'=>fake()->boolean(true),
+            'role'=>fake()->boolean(false)
         ];
     }
 

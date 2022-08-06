@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('phone',10)->nullable();
             $table->string('avatar')->nullable();
             $table->boolean('is_active')->default(false);
-            $table->integer('role')->default(0)->comment('Mặc định: 0(User), Admin: 1');
+            $table->integer('role')->default(0)->comment('Mặc định: 0(User),NVien: 1, Admin: 2');
             $table->rememberToken();
             $table->timestamps();
             $table->engine = 'InnoDB';

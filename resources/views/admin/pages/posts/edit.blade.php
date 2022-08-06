@@ -20,11 +20,15 @@
             <form action="{{route('UpdatePost', $post->id)}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-6">
                         <label for="" class="form-label fw-bolder">Tiêu đề</label>
                         <input type="text" class="form-control" name="title" value="{{$post->title}}">
                     </div>
-                    <div class="col-12 col-lg-2">
+                    <div class="col-12 col-lg-6">
+                        <label for="" class="form-label fw-bolder">Mô tả ngắn</label>
+                        <input type="text" class="form-control" name="short_content" value="{{$post->short_content}}">
+                    </div>
+                    <div class="col-12 col-lg-4">
                         <label for="" class="form-label fw-bolder">Chuyên mục</label>
                         <select name="subcategories" id="" class="form-select">
                             @foreach($dataSubCategories as $subCategories)
@@ -36,7 +40,7 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-4">
                         <div>
                             <label for="" class="form-label fw-bolder">Trạng thái</label>
                         </div>
@@ -64,7 +68,7 @@
                             </div>
                         @endif
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-4">
                         <label for="" class="form-label fw-bolder">Người đăng</label>
                         <p>{{$post->user->name}}</p>
                     </div>
@@ -72,7 +76,7 @@
                         <label for="" class="fw-bolder">Nội dung</label>
                         <textarea id="editor" name="content">{{$post->content}}</textarea>
                     </div>
-                    <div class="col-12 col-lg-6 mt-2">
+                    <div class="col-12 mt-2">
                         <label for="" class="fw-bolder">Ảnh đại diện</label>
                         <input type="file" name="image" class="form-control">
                         <div class="my-2">

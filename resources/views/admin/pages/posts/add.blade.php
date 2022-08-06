@@ -19,11 +19,17 @@
             <form action="{{route('AddPost')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-6">
                         <label for="" class="form-label fw-bolder">Tiêu đề</label>
-                        <input type="text" class="form-control" name="title" value="">
+                        <input type="text" class="form-control" name="title">
                     </div>
-                    <div class="col-12 col-lg-4">
+
+                    <div class="col-12 col-lg-6">
+                        <label for="" class="form-label fw-bolder">Mô tả ngắn</label>
+                        <input type="text" class="form-control" name="short_content">
+                    </div>
+
+                    <div class="col-12 col-lg-6">
                         <label for="" class="form-label fw-bolder">Chuyên mục</label>
                         <select name="subcategories" id="" class="form-select">
                             @foreach($dataSubCategories as $subCategories)
@@ -31,7 +37,7 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-6">
                         <div>
                             <label for="" class="form-label fw-bolder">Trạng thái</label>
                         </div>

@@ -45,11 +45,30 @@
                     </a>
                 </li>
                 <li>
-                    <a href="" class="text-decoration-none">
-                        <i class="mdi mdi-account"></i>
-{{--                        <i class="mdi mdi-logout"></i>--}}
-                        Đăng nhập
-                    </a>
+                    @if(Auth::check())
+                        <div class="dropdown" id="user__dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                Xin chào <span>{{Auth::user()->name}}</span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Tài khoản</a></li>
+                                <li><a class="dropdown-item" href="#">Bài viết</a></li>
+                                <form action="{{route('logout')}}" method="post">
+                                    @csrf
+                                    <li>
+                                        <li class="dropdown-item"> <button class="btn" type="submit"><i class="mdi mdi-logout"></i> Đăng xuất</button></li>
+                                    </li>
+                                </form>
+                            </ul>
+                        </div>
+                    @else
+                        <a href="{{route('login')}}" class="text-decoration-none">
+                            <i class="mdi mdi-account"></i>
+                            Đăng nhập
+                        </a>
+                    @endif
+
                 </li>
             </ul>
         </div>
@@ -83,7 +102,7 @@
                 </li>
                 @foreach($listCategories as $categories)
                     <li class="nav-item">
-                        <a class="nav-link" href="">{{$categories->name}}</a>
+                        <a class="nav-link" href="{{route('client.posts.categories', [$categories->url, $categories->id])}}">{{$categories->name}}</a>
                         @if($categories->subCategories)
                             <ul class="sub-nav">
                                 @foreach($categories->subCategories as $subCategories)

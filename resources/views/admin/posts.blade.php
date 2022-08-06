@@ -69,19 +69,16 @@
                     <td>{{$post->updated_at->format('H:i:s d/m/Y')}}</td>
                     <td class="d-flex justify-content-center py-lg-5">
                         <div class="btn-group text-center" role="group">
-                            <button type="button" class="btn btn-dark">
-                                <a href="{{route('EditPost',$post->id)}}" class="text-white"
-                                    {{--data-bs-toggle="modal"
-                                    data-bs-target="#modalPostDelete"--}}
-                                >
+                            <a href="{{route('EditPost',$post->id)}}" class="text-white">
+                                <button type="button" class="btn btn-dark">
                                     <i class="fa-solid fa-pen-to-square"></i>
-                                </a>
-                            </button>
-                            <button type="button" class="btn btn-warning">
-                                <a href="{{route('DeletePost', $post->id)}}" class="text-danger">
+                                </button>
+                            </a>
+                            <a href="{{route('DeletePost', $post->id)}}" class="text-danger">
+                                <button type="button" class="btn btn-warning">
                                     <i class="fa-solid fa-trash-can"></i>
-                                </a>
-                            </button>
+                                </button>
+                            </a>
                         </div>
                     </td>
                 </tr>

@@ -9277,6 +9277,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+a:hover {
+  color: #087cce !important;
+  text-decoration: none;
+}
+
 h1,
 h2,
 h3,
@@ -9717,6 +9722,7 @@ h6,
   padding: 0;
   list-style: none;
   padding-left: 22px;
+  align-items: center;
 }
 .social-media li {
   padding: 0 4px;
@@ -9729,6 +9735,21 @@ h6,
 }
 .social-media li a i {
   font-size: 14px;
+}
+
+#user__dropdown button {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: black;
+  border-radius: 10px;
+}
+#user__dropdown button span {
+  font-weight: bold;
+}
+#user__dropdown li a {
+  background: #fff !important;
+  color: #000;
+  padding: 10px;
 }
 
 .navbar-bottom-menu {

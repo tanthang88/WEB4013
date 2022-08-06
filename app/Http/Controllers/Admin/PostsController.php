@@ -43,6 +43,7 @@ class PostsController extends Controller
         }
         Posts::create([
             'title'=>$request->title,
+            'short_content'=>$request->short_content,
             'content'=>$request->input('content'),
             'image'=>$imageUrl,
             'slug'=>Str::slug($request->title),
@@ -61,6 +62,7 @@ class PostsController extends Controller
             Posts::whereId($idPost)->update([
                 'title'=>$request->title,
                 'content'=>$request->input('content'),
+                'short_content'=>$request->short_content,
                 'image'=>$imageUrl,
                 'slug'=>Str::slug($request->title),
                 'is_active'=>$request->active,
